@@ -7,5 +7,12 @@ router.route('/')
     console.log('Hey from post!!');
     res.send({ok: true});
   });
+  .post(function(req, res){
+     var user=req.body;
+     users.push(user);
+    res.json(user);
+  })
+
+
 
 module.exports = router;

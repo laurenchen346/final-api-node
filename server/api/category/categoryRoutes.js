@@ -8,15 +8,23 @@ var router = require('express').Router();
 //Then use route() to remove redundant code.
 router.route('/')
   .get(function(req, res){
-    console.log('Hey from user!!');
+    console.log('Hey from category!!');
     res.send({ok: true});
   });
 
 router.route('/err').get(function(req, res){
   console.log("error occurs");
-})
+});
+
+router.route('/')
+.get(function(req, res){
+     console.log('Hey from post!!');
+     res.send({ok: true});
+     });
 .post(function(req, res){
+      var user=req.body;
+      users.push(user);
       res.json(user);
-      });
+      })
 
 module.exports = router;
