@@ -12,4 +12,8 @@ router.route('/')
     res.send({ok: true});
   });
 
+router.route('/err').get(function(req, res){
+                         console.log("error occurs");
+                         });
+
 module.exports = router;
